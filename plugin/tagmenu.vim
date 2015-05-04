@@ -572,3 +572,5 @@ augroup FunctionMenuAutoCmds
     autocmd BufEnter * call s:Add_Tags_Menu(0)
     autocmd BufLeave * call s:Remove_Tags_Menu()
 augroup end
+
+noremap <f12><f12> :popup PopUp.T&ags.function<CR>
