@@ -119,7 +119,7 @@ endif
 " File types supported by tagmenu
 let s:tmenu_file_types = 'asm asp awk c cpp cobol eiffel fortran java lisp ' .
             \ 'make pascal perl php python rexx ruby scheme sh slang tcl ' .
-            \ 'verilog vim yacc'
+            \ 'verilog vim yacc vb'
 
 " assembly language
 let s:tmenu_asm_ctags_args = '--language-force=asm --asm-types=dlmt'
@@ -221,6 +221,11 @@ let s:tmenu_vim_tag_types = 'variable function'
 " yacc language
 let s:tmenu_yacc_ctags_args = '--language-force=yacc --yacc-types=l'
 let s:tmenu_yacc_tag_types = 'label'
+
+" vb language
+let s:tmenu_vb_ctags_args = '--language-force=basic --langmap=basic:.vb.vbs --basic-types=f'
+let s:tmenu_vb_tag_types = 'function'
+
 
 " Tmenu_Init()
 " Initialize the tagmenu script local variables for the supported file types
