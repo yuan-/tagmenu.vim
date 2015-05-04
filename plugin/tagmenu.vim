@@ -524,6 +524,7 @@ function! s:Add_Tags_Menu(menu_clear)
 
         let i = i + 1  " Next tag type
     endwhile
+    exec 'noremap <f12><f12> :popup PopUp.T&ags.'.s:tmenu_{ftype}_{i-1}_name.'<CR>'
 
     " Store (cache) the tags menu command for this buffer
     let b:Tmenu_cmd = cmd
@@ -573,4 +574,4 @@ augroup FunctionMenuAutoCmds
     autocmd BufLeave * call s:Remove_Tags_Menu()
 augroup end
 
-noremap <f12><f12> :popup PopUp.T&ags.function<CR>
+"noremap <f12><f12> :popup PopUp.T&ags.function<CR>
